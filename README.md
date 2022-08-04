@@ -1,5 +1,5 @@
 # Algorithms design and analysis
-This repo is dedicated to selected algorithms written for Algorithms design and analysis course at AGH UST (21/22)!
+This repository is dedicated to selected algorithms written for Algorithms design and analysis course at AGH UST (21/22)!
 
 `Here are links to my profiles on:`
 
