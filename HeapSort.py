@@ -1,7 +1,5 @@
-# Zadanie 4
-
 def left(index):
-    return 2*index+1 #lewy syn
+    return 2*index+1 #left son
 
 
 def right(index):
@@ -19,18 +17,18 @@ def heapify(a, size, index):
     if r < size and a[r] > a[max]:
         max = r
 
-    if max != index: # jesli nie korzen nie jest najwiekszy
+    if max != index: # if not root, not max
         a[index], a[max] = a[max], a[index]
         heapify(a, size, max)
 
 
 def heap_sort(arr):
-    for i in range(int(len(arr)/2), -1, -1): #od ostatniego i az do zerowego lece
+    for i in range(int(len(arr)/2), -1, -1): # from last to 0
         heapify(arr, len(arr), i)
 
     for i in range(len(arr)-1, -1, -1):
-        arr[0], arr[i] = arr[i], arr[0]   # max element z indeksem 0
-        heapify(arr, i, 0) # "i" ito rozmiar kopca ktory znow musimy zrobic na kopiec max
+        arr[0], arr[i] = arr[i], arr[0]   # max element with index 0
+        heapify(arr, i, 0) # "i" size >> max 
 
 
 if __name__ == '__main__':
