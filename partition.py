@@ -1,10 +1,4 @@
-
-# # lub arr[i] < pivot : right.append(arr[i])
-# # for i in range (0, len(arr))
-#     parted = partition(array)
-#     print(parted)
-
-#  QUICK SORT 2
+# quicksort partition
 def partition(arr):
     right = []
     left = []
