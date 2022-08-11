@@ -1,0 +1,12 @@
+def prims(n, edges, start):
+    vertices = {start}
+    result = 0
+    edges.sort(key = lambda e: e[2])
+    while len(vertices) < n:
+        for e in edges:
+            if ((e[0] in vertices and e[1] not in vertices)
+                or (e[1] in vertices and e[0] not in vertices)):
+                vertices.update(e[:2])
+                result += e[2]
+                break
+    return result
